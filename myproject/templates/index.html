@@ -1,1 +1,14 @@
-<h2>Welcome {{ name }}<h2/>
+<h2>Welcome {{ name }}</h2>
+
+{% if user == 'admin' %}
+<h2>Welcome, {{user}}</h2>
+{% else %}
+<h2>Access Denied</h2>
+{% endif %}
+
+<h1>List of Languages</h1>
+<ul>
+    {% for lang in langs %}
+    <li>{{ lang }}</li>
+    {% endfor %}
+</ul>
