@@ -6,5 +6,10 @@ def index(request, name):
     return render(request, 'index.html', context)
 
 # def index(request):
-    context={'user': 'admin'}
-    return render(request, 'index.html', context)
+#     context={'user': 'admin'}
+#     return render(request, 'index.html', context)
+
+def myview(request):
+    langs = ['Python', 'Java', 'PHP', 'Ruby', 'Rust']
+    return render(request, 'langs.html', {'lang':langs})
+
